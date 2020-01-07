@@ -1,22 +1,17 @@
-//console.log("Up and running!");
 
-
-//console.log("User flipped " + cardOne);
-//console.log("User flipped " + cardThree);
 
 var cards = ["queen", "queen", "king", "king"];
 var cardsInPlay = [];
-//represents 1st card user flips
-var cardOne = cards[0];
 
-cardsInPlay.push('cardOne');
+function checkForMatch() {
+	if (cardsInPlay[0] === cardsInPlay[1]) {
+  console.log("You found a match!");
+} else {
+  console.log("Sorry, try again.");
+}
+}
 
-console.log("User flipped queen");
-//represents 2nd card user flips
-var cardTwo = cards[2];
-//add cardTwo to player hand
-cardsInPlay.push(cardTwo);
-console.log("User flipped king");
+function flipCard(cardId){
 
 if (cardsInPlay.length === 2) {
 	if (cardsInPlay[0] === cardsInPlay[2]) {
@@ -25,6 +20,14 @@ if (cardsInPlay.length === 2) {
 		else {
 			alert("Sorry, try again.")
 		}
+}
+checkForMatch();
+console.log("User flipped " + cards[cardId]);
+cardsInPlay.push(cards[cardId]);
+flipCard();
+flipCard(0);
+flipCard(2);
+
 }
 
 
