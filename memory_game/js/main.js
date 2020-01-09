@@ -20,9 +20,12 @@ var cards = [
 ];
 var cardsInPlay = [];
 
+
+
 function checkForMatch() {
 
-	this.setAttribute('src', cards[cardId].cardImage);
+this.setAttribute('src', cards[cardId].cardImage);
+	
 
 	if (cardsInPlay[0] === cardsInPlay[1]) {
   console.log("You found a match!");
@@ -52,7 +55,7 @@ for (let i = 0; i < cards.length; i++) {
 }
 };
 
-createBoard(0);
+createBoard();
 
 
 
